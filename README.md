@@ -8,26 +8,30 @@ We implemented several classification models to predict whether a transaction is
 
 | Model                        | Precision (Fraud) | Recall (Fraud) | F1 Score (Fraud) |
 |------------------------------|-------------------|----------------|------------------|
-| **Logistic Regression**       | 0.88              | 0.70           | 0.78             |
-| **Random Forest Classifier**  | 0.91              | 0.61           | 0.73             |
-| **Gradient Boosting Classifier** | 0.85           | 0.94           | 0.89             |
-| **Support Vector Machine (SVM)** | 0.93           | 0.93           | 0.93             |
+| **Logistic Regression**       | 0.83              | 0.56           | 0.67             |
+| **Shallow Neural Network**    | 0.75              | 0.75           | 0.75             |
+| **Random Forest Classifier**  | 0.81              | 0.47           | 0.60             |
+| **Gradient Boosting Classifier** | 0.67           | 0.67           | 0.67             |
+| **Support Vector Machine (SVM)** | 0.07           | 0.97           | 0.14             |
 
 ### Balanced Dataset
 
-After addressing the imbalance in the dataset, the models were retrained using the balanced data. Here are the updated performance metrics:
+After addressing the imbalance in the dataset, the models were re-trained using the balanced data. Here are the updated performance metrics:
 
 | Model                        | Precision (Fraud) | Recall (Fraud) | F1 Score (Fraud) |
 |------------------------------|-------------------|----------------|------------------|
-| **Logistic Regression**       | 0.91              | 0.82           | 0.86             |
-| **Random Forest Classifier**  | 0.94              | 0.79           | 0.86             |
-| **Gradient Boosting Classifier** | 0.85           | 0.94           | 0.89             |
-| **Support Vector Machine (SVM)** | 0.91           | 0.78           | 0.84             |
+| **Logistic Regression**       | 0.93              | 0.94           | 0.94             |
+| **Shallow Neural Network**    | 0.85              | 0.94           | 0.89             |
+| **Random Forest Classifier**  | 1.00              | 0.51           | 0.68             |
+| **Gradient Boosting Classifier** | 1.00           | 0.73           | 0.84             |
+| **Support Vector Machine (SVM)** | 0.93           | 0.93           | 0.93             |
 
 ### Analysis and Observations:
 
-- **Random Forest** and **Gradient Boosting** perform well on the **balanced dataset**, with strong precision and recall values.
-- **SVM** achieves **very high precision and recall**, showing it is effective in catching frauds without many false positives.
-- The **Logistic Regression** model performed well before balancing, but after balancing, it improved further in recall, making it more sensitive to fraud detection.
+- The **Shallow Neural Network** achieved a balanced performance after dataset balancing with a high F1 score of **0.89**, making it effective in fraud detection.
+- **SVM** maintains excellent performance with **0.93** precision and recall, showing its strength in identifying fraud with minimal false positives.
+- **Logistic Regression** also performs well with **0.94** recall and **0.93** precision, achieving an F1 score of **0.94**.
+- **Random Forest** shows perfect precision (**1.00**) but lower recall (**0.51**), leading to an F1 score of **0.68**, which indicates it misses a significant amount of fraud.
+- **Gradient Boosting** has high precision (**1.00**) and decent recall (**0.73**), resulting in an F1 score of **0.84**.
 
-In conclusion, **SVM** and **Random Forest** models show great promise for fraud detection, particularly in balancing precision and recall.
+In conclusion, **Logistic Regression**, **SVM**, and **Shallow Neural Network** provide the best balance of precision and recall for fraud detection.
