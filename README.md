@@ -35,3 +35,8 @@ After addressing the imbalance in the dataset, the models were re-trained using 
 - **Gradient Boosting** has high precision (**1.00**) and decent recall (**0.73**), resulting in an F1 score of **0.84**.
 
 In conclusion, **Logistic Regression**, **SVM**, and **Shallow Neural Network** provide the best balance of precision and recall for fraud detection.
+
+
+### Resources Used:
+- Kaggle Dataset: [Link to the dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- Tutorial: [Link to the video](https://www.youtube.com/watch?v=M_Cu7r9gik4)
